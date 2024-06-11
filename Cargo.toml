@@ -1,5 +1,5 @@
 [package]
-name = "rust-pdk-template"
+name = "scraper-extism"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,4 +9,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 extism-pdk = "1.1.0"
+scraper = { git = "https://github.com/bradyjoslin/scraper.git", branch = "master" }
 serde = { version = "1.0.197", features = ["derive"] }
+anyhow = "1.0"
