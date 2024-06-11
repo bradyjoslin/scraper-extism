@@ -1,6 +1,6 @@
 # scraper-extism
 
-This is a plugin is intended to be used with the Extism plugin development kit (PDK).
+This is a plugin intended to be used with the Extism plugin development kit (PDK).
 
 ## Features
 - Strips all HTML tags and returns plain text content within a specified selector.
