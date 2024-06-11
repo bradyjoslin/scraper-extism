@@ -21,7 +21,7 @@ description: |
 tasks:
   - name: scrape
     pre_script: >
-      let wasm = "scraper_extism.wasm";
+      let wasm = "https://github.com/bradyjoslin/scraper-extism/releases/latest/download/scraper_extism.wasm";
       let content = Get("https://bradyjoslin.com/blog/remote-vs-code/");
       let content_length = len(content);
       let params = (
@@ -34,7 +34,7 @@ tasks:
       let post_content = Extism(wasm, "scraper", params);
       let post_length = len(post_content);
       let percent_saved = ((content_length - post_length) / content_length * 100);
-      post_content + "\n" + "Characters reduced (percent): " + string(percent_saved)
+      "Characters reduced (percent): " + string(percent_saved)
     plugin: openai
     prompt: |
       echo exactly what i send you.  no omissions or modifications
